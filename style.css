@@ -1,6 +1,10 @@
 @import url('./assets/fonts.css');
 @import url('./assets/normalize.css');
 
+html {
+  scroll-behavior: smooth;
+}
+
 .root {
   display: grid;
   grid-template-columns: 1fr;
