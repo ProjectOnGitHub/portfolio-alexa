@@ -1,18 +1,20 @@
 @font-face {
   src: url('./fonts/Inter-Regular.woff') format('woff'),
     url('./fonts/Inter-Regular.woff2') format('woff2');
+  font-family: 'Inter';
+  font-weight: 400;
 }
 
 @font-face {
-  src: url(./Inter-Bold.woff) format('woff'),
-    url(./Inter-Bold.woff2) format('woff2');
+  src: url('.fonts/Inter-Bold.woff') format('woff'),
+    url('.fonts/Inter-Bold.woff2') format('woff2');
   font-family: 'Inter';
   font-weight: 700;
 }
 
 @font-face {
-  src: url(./Merriweather-Bold.woff) format('woff'),
-    url(./Merriweather-Bold.woff2) format('woff2');
+  src: url('.fonts/Merriweather-Bold.woff') format('woff'),
+    url('./fonts/Merriweather-Bold.woff2') format('woff2');
   font-family: 'Merriweather';
   font-weight: 700;
 }
