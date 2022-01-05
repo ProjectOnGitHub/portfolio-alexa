@@ -1,5 +1,5 @@
-@import url('./vendor/fonts.css');
-@import url('./vendor/normalize.css');
+@import url('./assets/fonts.css');
+@import url('./assets/normalize.css');
 
 .root {
   display: grid;
