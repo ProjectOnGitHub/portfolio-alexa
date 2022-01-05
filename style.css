@@ -1,0 +1,19 @@
+@import url('./vendor/fonts.css');
+@import url('./vendor/normalize.css');
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  background-color: #fff;
+  font: normal 14px/20px 'Inter', Arial, sans-serif;
+  color: #000;
+  -webkit-text-size-adjust: auto;
+  -ms-text-size-adjust: auto;
+  -moz-text-size-adjust: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
