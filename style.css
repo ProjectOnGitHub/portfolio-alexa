@@ -26,6 +26,15 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hover-effect {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.hover-effect:hover {
+  opacity: 0.9;
+}
+
 .header {
   display: grid;
   grid-template-columns: 1fr max-content max-content;
