@@ -106,9 +106,46 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
+  width: 100%;
   background-image: url('./assets/img/header-background.png');
   background-position: center -90px;
   background-repeat: no-repeat;
   height: 820px;
+  padding: 160px 0 0 80px;
+  box-sizing: border-box;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 530px;
+  height: 330px;
+}
+
+.hero__title {
+  font-family: 'Merriweather';
+  font-weight: 700;
+  color: var(--color-light);
+  font-size: 60px;
+  margin: 0;
+  line-height: 2;
+}
+
+.hero__text {
+  margin: 0;
+  color: var(--color-light);
+}
+
+.button__order {
+  width: 220px;
+  height: 55px;
+  background-color: var(--color-decoration);
+  color: var(--color-dark);
+  padding: 0;
+  border: none;
+}
+
+.button__order:hover {
+  color: var(--color-light);
 }
