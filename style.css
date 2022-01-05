@@ -99,4 +99,15 @@
 }
 
 .main {
+  width: var(--main-width);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-image: url('./assets/img/header-background.png');
+  background-position: center -90px;
+  background-repeat: no-repeat;
+  height: 820px;
 }
