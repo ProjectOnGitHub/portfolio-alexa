@@ -32,6 +32,8 @@
   padding: 0 20px;
   box-sizing: border-box;
   gap: 31px;
+  background: url('./assets/img/header-background.png');
+  background-position: center 0;
 }
 
 .header__container {
