@@ -29,6 +29,7 @@
   align-items: center;
   height: 90px;
   width: var(--main-width);
+  padding: 0 20px;
   box-sizing: border-box;
   gap: 31px;
 }
