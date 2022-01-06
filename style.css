@@ -184,7 +184,7 @@ html {
 
 .section__title {
   position: relative;
-  margin: 0;
+  margin: 0 0 60px 0;
   text-align: center;
   font-family: Merriweather;
   overflow: hidden;
