@@ -36,7 +36,24 @@ html {
 }
 
 .section {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 100%;
   padding-top: 100px;
+}
+
+.button__order {
+  width: 220px;
+  height: 55px;
+  background-color: var(--color-decoration);
+  color: var(--color-dark);
+  padding: 0;
+  border: none;
+}
+
+.button__order:hover {
+  color: var(--color-light);
 }
 
 .header {
@@ -154,15 +171,9 @@ html {
   color: var(--color-light);
 }
 
-.button__order {
-  width: 220px;
-  height: 55px;
-  background-color: var(--color-decoration);
-  color: var(--color-dark);
-  padding: 0;
-  border: none;
-}
-
-.button__order:hover {
-  color: var(--color-light);
+.section__title {
+  font-family: Merriweather;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--color-decoration);
 }
