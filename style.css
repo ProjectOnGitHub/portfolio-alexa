@@ -145,6 +145,7 @@ html {
 
 .main {
   width: var(--main-width);
+  padding: 0 20px;
 }
 
 .hero {
