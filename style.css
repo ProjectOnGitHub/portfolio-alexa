@@ -212,6 +212,8 @@ html {
   gap: 40px;
   color: var(--color-light);
   list-style-type: none;
+  max-width: 1400px;
+
   padding: 0;
   margin: 0;
 }
@@ -220,12 +222,14 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  align-content: space-between;
+  font-size: 18px;
+  padding: 0 20px;
   height: 240px;
 }
 
 .skills__icon {
-  width: 50px;
+  width: auto;
+  margin-bottom: 35px;
   height: 50px;
   fill: var(--color-decoration);
 }
@@ -235,6 +239,7 @@ html {
 }
 
 .skills__subtitle {
+  font-size: 20px;
   font-weight: 700;
   margin: 0;
 }
