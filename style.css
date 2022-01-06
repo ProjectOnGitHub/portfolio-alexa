@@ -172,8 +172,35 @@ html {
 }
 
 .section__title {
+  position: relative;
+  margin: 0;
+  text-align: center;
   font-family: Merriweather;
+  overflow: hidden;
   font-weight: 700;
+  width: calc(50% - 20px);
   font-size: 40px;
   color: var(--color-decoration);
+}
+
+.section__title::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: -75px;
+  overflow-x: hidden;
+  width: 50%;
+  border-top: 2px solid var(--color-decoration);
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  right: -75px;
+  overflow-x: hidden;
+  width: 50%;
+  border-top: 2px solid var(--color-decoration);
 }
