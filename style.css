@@ -181,26 +181,16 @@ html {
   width: calc(50% - 20px);
   font-size: 40px;
   color: var(--color-decoration);
+  background-image: linear-gradient(
+    to top,
+    #000 39px,
+    #bdae82 39px,
+    #bdae82 41px,
+    #000 41px
+  );
 }
 
-.section__title::before {
-  content: '';
-  position: absolute;
-  box-sizing: border-box;
-  top: 50%;
-  left: -75px;
-  overflow-x: hidden;
-  width: 50%;
-  border-top: 2px solid var(--color-decoration);
-}
-
-.section__title::after {
-  content: '';
-  position: absolute;
-  box-sizing: border-box;
-  top: 50%;
-  right: -75px;
-  overflow-x: hidden;
-  width: 50%;
-  border-top: 2px solid var(--color-decoration);
+.section__title-cover {
+  background-color: var(--color-dark);
+  padding: 0 20px;
 }
