@@ -392,17 +392,56 @@ html {
   display: grid;
   max-width: 450px;
   width: 100%;
-  padding: 0 20px 0 0;
+  margin: 0 20px 195px 0;
+  max-height: 445px;
+  padding-top: 60px;
+}
+
+.form__title {
+  font-family: Merriweather;
+  margin: 0 0 40px 0;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 2;
+  color: var(--color-decoration);
 }
 
 .form__fieldset {
   display: grid;
   grid-template-columns: 1fr;
+  height: 100%;
   border: none;
   padding: 0;
   margin: 0;
 }
 
+.form__input {
+  color: var(--color-decoration);
+  outline: none;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--color-decoration);
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
 .form__textarea {
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0;
+  height: 100px;
+  resize: none;
+  outline: none;
+  margin-bottom: 30px;
+  border: 2px solid var(--color-decoration);
+  box-sizing: border-box;
+  color: var(--color-decoration);
+  font-size: 20px;
+  padding: 10px 0 0 20px;
+}
+
+::placeholder {
+  color: var(--color-decoration);
+  font-size: 20px;
 }

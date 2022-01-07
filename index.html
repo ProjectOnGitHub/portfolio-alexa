@@ -283,33 +283,32 @@
             </li>
           </ul>
         </section>
-        <section id="contacts" class="contacts section">
+        <section id="contacts" class="contacts">
           <form class="form__container">
-            <h2 class="form__title">Contacts</h2>
+            <h2 class="form__title">Contact me</h2>
             <fieldset class="form__fieldset">
-              <label class="form__label">
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="E-mail"
-                  class="form__input"
-                />
-              </label>
-              <label class="form__label">
-                <input
-                  name="phone"
-                  type="tel"
-                  placeholder="Phone"
-                  class="form__input"
-                />
-              </label>
+              <input
+                name="email"
+                type="email"
+                placeholder="E-mail"
+                class="form__input"
+              />
+              <input
+                name="phone"
+                type="tel"
+                placeholder="Phone"
+                class="form__input"
+              />
               <textarea
                 name="textarea"
-                cols="30"
-                rows="10"
                 class="form__textarea"
+                placeholder="Message"
               ></textarea>
-              <button type="submit" class="form__submit-button">
+              <button
+                type="submit"
+                class="button__order hover-effect"
+                aria-label="Send message"
+              >
                 Send message
               </button>
             </fieldset>
