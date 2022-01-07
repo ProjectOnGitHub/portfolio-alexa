@@ -297,3 +297,35 @@ html {
   width: 450px;
   height: 560px;
 }
+.video__player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1400px;
+}
+
+.video__player-image {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+.video__player-button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  background-image: url(./assets/svg/play-button-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  padding: 0;
+  width: 130px;
+  height: 130px;
+}
+
+.video__player-button:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
