@@ -234,10 +234,6 @@ html {
   fill: var(--color-decoration);
 }
 
-.skills__icon:hover {
-  fill: var(--color-light);
-}
-
 .skills__subtitle {
   font-size: 20px;
   font-weight: 700;
