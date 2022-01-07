@@ -284,9 +284,36 @@
           </ul>
         </section>
         <section id="contacts" class="contacts section">
-          <h2 class="section__title">
-            <span class="section__title-cover">Contacts</span>
-          </h2>
+          <form class="form__container">
+            <h2 class="form__title">Contacts</h2>
+            <fieldset class="form__fieldset">
+              <label class="form__label">
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="E-mail"
+                  class="form__input"
+                />
+              </label>
+              <label class="form__label">
+                <input
+                  name="phone"
+                  type="tel"
+                  placeholder="Phone"
+                  class="form__input"
+                />
+              </label>
+              <textarea
+                name="textarea"
+                cols="30"
+                rows="10"
+                class="form__textarea"
+              ></textarea>
+              <button type="submit" class="form__submit-button">
+                Send message
+              </button>
+            </fieldset>
+          </form>
         </section>
       </main>
     </div>

@@ -379,3 +379,30 @@ html {
   margin: 0;
   font-size: 18px;
 }
+
+.contacts {
+  display: grid;
+  justify-items: end;
+  background: url('./assets/img/contacts-background.png');
+  background-size: auto 700px;
+  background-position: center center;
+}
+
+.form__container {
+  display: grid;
+  max-width: 450px;
+  width: 100%;
+  padding: 0 20px 0 0;
+}
+
+.form__fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__textarea {
+  padding: 0;
+}
