@@ -441,3 +441,54 @@ html {
   color: var(--color-decoration);
   font-size: 20px;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--main-width);
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 150px;
+}
+
+.footer__copyright {
+  color: var(--color-light);
+}
+
+.footer__social {
+  display: flex;
+  align-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.footer__social-item {
+  display: flex;
+  align-content: center;
+}
+.footer__social-link {
+  display: flex;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--color-light);
+  line-height: 2.5;
+}
+
+.footer__social-icon {
+  width: 32px;
+  height: 32px;
+  fill: var(--color-light);
+}
+
+.footer__social-icon:hover {
+  fill: var(--color-decoration);
+}
+
+.footer__link:hover {
+  color: var(--color-decoration);
+}
