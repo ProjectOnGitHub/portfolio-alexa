@@ -73,6 +73,11 @@ html {
   color: var(--color-light);
 }
 
+.link {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
 .section__title {
   position: relative;
   margin: 0 0 60px 0;
@@ -143,11 +148,6 @@ html {
 .header__menu {
   display: flex;
   gap: 30px;
-}
-
-.header__menu-link {
-  color: var(--color-light);
-  text-decoration: none;
 }
 
 .header__menu-link:hover {
@@ -479,13 +479,12 @@ html {
   display: flex;
   align-content: center;
 }
+
 .footer__social-link {
   display: flex;
 }
 
 .footer__link {
-  text-decoration: none;
-  color: var(--color-light);
   line-height: 2.5;
 }
 
