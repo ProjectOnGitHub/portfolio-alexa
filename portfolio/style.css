@@ -110,7 +110,7 @@ html {
   align-items: center;
   height: 90px;
   gap: 31px;
-  background: url('./assets/img/header-background.png');
+  background: url('./assets/img/header-background.jpg');
   background-position: center 0;
   background-repeat: no-repeat;
   box-sizing: border-box;
@@ -191,7 +191,7 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  background-image: url('./assets/img/header-background.png');
+  background-image: url('./assets/img/header-background.jpg');
   background-position: center -90px;
   background-repeat: no-repeat;
   height: 820px;
@@ -393,7 +393,7 @@ html {
 .contacts {
   display: grid;
   justify-items: end;
-  background: url('./assets/img/contacts-background.png');
+  background: url('./assets/img/contacts-background.jpg');
   background-size: auto 700px;
   background-position: center center;
 }
