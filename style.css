@@ -467,7 +467,10 @@ html {
 }
 
 .footer__copyright {
+  display: flex;
+  gap: 20px;
   color: var(--color-light);
+  align-items: center;
 }
 
 .footer__social {
