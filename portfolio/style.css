@@ -478,8 +478,10 @@ html {
 .footer__copyright {
   display: flex;
   gap: 20px;
-  color: var(--color-light);
   align-items: center;
+  color: var(--color-light);
+  margin: 0;
+  width: 188px;
 }
 
 .footer__social {
