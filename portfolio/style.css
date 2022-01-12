@@ -334,8 +334,8 @@ html {
 }
 
 .portfolio__filter-button:hover {
-  color: var(--color-dark);
-  background-color: var(--color-decoration);
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 .portfolio__filter-button_active {
