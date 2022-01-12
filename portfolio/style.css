@@ -41,6 +41,17 @@ html {
   padding: 0 20px;
 }
 
+@media screen and (max-width: 1024px) {
+  .common-indent {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .common-indent {
+    padding: 0 60px;
+  }
+}
+
 .section {
   display: grid;
 
