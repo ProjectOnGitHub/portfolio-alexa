@@ -330,14 +330,12 @@ html {
 /* Skills */
 
 .skills__list {
+  width: 100%;
   display: grid;
-
-  max-width: 1400px;
-
   color: var(--color-light);
-
   gap: 40px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, 320px);
+  justify-content: center;
 }
 
 .skills__list-item {
