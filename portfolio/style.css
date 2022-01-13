@@ -134,7 +134,6 @@ html {
 /* Header */
 
 .header {
-  display: grid;
   align-items: center;
   justify-content: space-between;
 
