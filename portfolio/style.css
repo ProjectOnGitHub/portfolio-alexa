@@ -33,6 +33,7 @@ html {
 }
 
 .common-width {
+  display: grid;
   max-width: var(--main-width);
   width: 100%;
 }
