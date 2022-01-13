@@ -612,10 +612,9 @@ html {
 /* Footer */
 
 .footer {
-  display: flex;
+  grid-template-columns: repeat(3, max-content);
   align-items: center;
   justify-content: space-between;
-
   box-sizing: border-box;
   height: 150px;
 }
