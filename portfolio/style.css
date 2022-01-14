@@ -466,12 +466,30 @@ html {
 
 .portfolio__filter {
   display: grid;
+  width: 100%;
   justify-content: center;
-
   margin: 0 0 60px 0;
-
   gap: 5px;
-  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, 225px);
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio__filter {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .portfolio__filter {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills__icon {
+    margin-bottom: 0;
+  }
 }
 
 .portfolio__filter-item {
@@ -497,12 +515,12 @@ html {
 
 .portfolio__list {
   display: grid;
-
   width: 100%;
-  max-width: 1400px;
-
+  justify-content: center;
   gap: 25px;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, 450px);
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .portfolio__list-item {
