@@ -544,9 +544,8 @@ html {
 .video__player-image {
   max-width: 100%;
   height: auto;
-  height: auto;
-
-  object-fit: contain;
+  object-fit: cover;
+  min-height: 628px;
 }
 
 .video__player-button {
@@ -554,6 +553,7 @@ html {
 
   width: 130px;
   height: 130px;
+
   padding: 0;
 
   border: none;
