@@ -564,6 +564,20 @@ html {
   background-size: contain;
 }
 
+@media screen and (max-width: 1024px) {
+  .video__player-button {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video__player-button {
+    width: 75px;
+    height: 75px;
+  }
+}
+
 .video__player-button:hover {
   filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
