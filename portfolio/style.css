@@ -392,9 +392,16 @@ html {
   justify-content: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .skills__list {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .skills__list {
     gap: 21px 25px;
+    margin-bottom: 20px;
   }
 }
 
@@ -545,7 +552,7 @@ html {
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  min-height: 628px;
+  min-height: 418px;
 }
 
 .video__player-button {
