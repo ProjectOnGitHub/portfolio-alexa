@@ -385,11 +385,11 @@ html {
 
 .skills__list {
   width: 100%;
-  display: grid;
+  display: flex;
   color: var(--color-light);
   gap: 40px;
-  grid-template-columns: repeat(auto-fit, 320px);
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1024px) {
@@ -406,15 +406,15 @@ html {
 }
 
 .skills__list-item {
+  box-sizing: border-box;
   display: grid;
-
   height: 240px;
   padding: 0 20px;
-
   font-size: 18px;
-
   grid-template-columns: 1fr;
   justify-items: center;
+  width: 320px;
+}
 }
 
 @media screen and (max-width: 768px) {
