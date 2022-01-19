@@ -606,6 +606,12 @@ html {
   gap: 25px;
 }
 
+@media screen and (max-width: 768px) {
+  .price__list {
+    gap: 50px;
+  }
+}
+
 .price__list-item {
   display: grid;
 
@@ -618,6 +624,12 @@ html {
 
   grid-template-columns: 1fr;
   justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .price__list-item {
+    width: 420px;
+  }
 }
 
 .price__subtitle {
