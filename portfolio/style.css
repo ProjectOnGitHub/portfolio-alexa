@@ -797,6 +797,18 @@ html {
   height: 150px;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer {
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    height: 190px;
+    align-content: center;
+    gap: 27px;
+    padding: 20px 0 30px;
+  }
+}
+
 .footer__copyright {
   display: flex;
   align-items: center;
@@ -807,6 +819,13 @@ html {
   color: var(--color-light);
 
   gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__copyright {
+    width: 173px;
+    line-height: 1;
+  }
 }
 
 .footer__social {
@@ -827,6 +846,18 @@ html {
 
 .footer__link {
   line-height: 2.5;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__link {
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__copyright {
+    line-height: 1;
+  }
 }
 
 .footer__social-icon {
