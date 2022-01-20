@@ -53,6 +53,18 @@ html {
   }
 }
 
+@media screen and (max-width: 568px) {
+  .common-indent {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .common-indent {
+    padding: 0 20px;
+  }
+}
+
 .section {
   display: grid;
 
