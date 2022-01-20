@@ -620,12 +620,12 @@ html {
   padding: 0;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   .portfolio__list {
     grid-template-columns: repeat(auto-fit, minmax(280px, 450px));
   }
 }
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   .portfolio__list-item {
     height: auto;
     display: grid;
@@ -633,7 +633,7 @@ html {
   }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   .portfolio__photo {
     height: auto;
     width: 100%;
