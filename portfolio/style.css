@@ -415,7 +415,6 @@ html {
   justify-items: center;
   width: 320px;
 }
-}
 
 @media screen and (max-width: 768px) {
   .skills__list-item {
@@ -676,6 +675,22 @@ html {
   background-size: auto 700px;
 
   justify-items: end;
+
+  padding: 60px 20px 195px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .contacts {
+    background-size: auto 650px;
+    justify-items: center;
+    padding: 60px 0 145px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contacts {
+    background-size: auto 600px;
+    padding-bottom: 110px;
+  }
 }
 
 .form__container {
@@ -684,8 +699,19 @@ html {
   width: 100%;
   max-width: 450px;
   max-height: 445px;
-  margin: 0 20px 195px 0;
-  padding-top: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .form__container {
+    background-size: auto 650px;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form__container {
+    background-size: auto 600px;
+  }
 }
 
 .form__title {
@@ -701,9 +727,15 @@ html {
   line-height: 2;
 }
 
+@media screen and (max-width: 768px) {
+  .form__title {
+    font-size: 32px;
+  }
+}
+
 .form__fieldset {
   display: grid;
-
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -713,12 +745,18 @@ html {
   grid-template-columns: 1fr;
 }
 
+@media screen and (max-width: 1024px) {
+  .form__fieldset {
+    justify-items: center;
+  }
+}
+
 .form__input {
   box-sizing: border-box;
   height: 50px;
   margin-bottom: 20px;
   padding-left: 20px;
-
+  width: 100%;
   color: var(--color-decoration);
   border: 2px solid var(--color-decoration);
   outline: none;
@@ -727,6 +765,7 @@ html {
 
 .form__textarea {
   box-sizing: border-box;
+  width: 100%;
   height: 100px;
   margin-bottom: 30px;
   padding: 0;
