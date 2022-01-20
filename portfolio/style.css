@@ -658,10 +658,18 @@ html {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .video__player-image {
     min-height: 418px;
     object-position: left -5px top 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .video__player-image {
+    min-height: auto;
+    max-height: 481px;
+    object-position: center;
   }
 }
 
@@ -692,6 +700,13 @@ html {
   .video__player-button {
     width: 65px;
     height: 65px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .video__player-button {
+    width: 50px;
+    height: 50px;
   }
 }
 
