@@ -475,13 +475,13 @@ html {
   width: 100%;
   justify-content: center;
   margin: 0 0 60px 0;
-  gap: 5px;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, 225px);
 }
 
 @media screen and (max-width: 1024px) {
   .portfolio__filter {
+    gap: 5px;
     max-width: 500px;
   }
 }
