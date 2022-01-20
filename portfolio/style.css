@@ -139,14 +139,13 @@ html {
 @media screen and (max-width: 1024px) {
   .section__title {
     font-size: 36px;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 768px) {
   .section__title {
     font-size: 32px;
     line-height: 2.5;
-    margin-bottom: 45px;
   }
 }
 
@@ -394,6 +393,7 @@ html {
 
 @media screen and (max-width: 1024px) {
   .skills__list {
+    margin-top: -5px;
     margin-bottom: 10px;
   }
 }
