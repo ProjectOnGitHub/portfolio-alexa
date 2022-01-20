@@ -502,6 +502,12 @@ html {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .skills__list-item {
+    width: 270px;
+  }
+}
+
 .skills__icon {
   width: auto;
   height: 50px;
