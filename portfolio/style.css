@@ -478,6 +478,12 @@ html {
   }
 }
 
+@media screen and (max-width: 568px) {
+  .skills__list {
+    margin-bottom: 0;
+  }
+}
+
 .skills__list-item {
   box-sizing: border-box;
   display: grid;
