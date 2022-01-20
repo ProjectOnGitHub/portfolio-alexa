@@ -758,6 +758,14 @@ html {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .price__list-item {
+    height: 450px;
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+
 .price__subtitle {
   margin: 0;
 
@@ -765,6 +773,12 @@ html {
   font-size: 28px;
   font-weight: 700;
   line-height: 2;
+}
+
+@media screen and (max-width: 480px) {
+  .price__subtitle {
+    font-size: 20px;
+  }
 }
 
 .price__text {
@@ -778,6 +792,12 @@ html {
   line-height: 2;
 }
 
+@media screen and (max-width: 480px) {
+  .price__text {
+    font-size: 18px;
+  }
+}
+
 .price__sublist {
   display: grid;
 
@@ -787,6 +807,12 @@ html {
 
   grid-template-columns: 1fr;
   justify-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .price__sublist {
+    font-size: 16px;
+  }
 }
 
 .price__list-button {
