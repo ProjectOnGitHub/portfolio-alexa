@@ -193,6 +193,12 @@ html {
   }
 }
 
+@media screen and (max-width: 568px) {
+  .header {
+    background-size: auto 520px;
+  }
+}
+
 .header__container {
   display: flex;
   align-items: center;
@@ -301,6 +307,13 @@ html {
     max-height: 500px;
     background-position: -5px -120px;
     background-size: auto 620px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .hero {
+    max-height: 400px;
+    background-size: auto 520px;
   }
 }
 
