@@ -839,10 +839,19 @@ html {
     padding: 60px 0 145px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .contacts {
     background-size: auto 600px;
     padding-bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .contacts {
+    background-position-x: 30%;
+    padding-top: 50px;
+    padding-bottom: 70px;
   }
 }
 
