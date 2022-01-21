@@ -204,6 +204,7 @@ html {
   background-position: center 0;
   gap: 31px;
   grid-template-columns: 1fr max-content max-content;
+  grid-template-areas: 'logo navigation switcher';
 }
 
 @media screen and (max-width: 1024px) {
@@ -216,6 +217,7 @@ html {
   .header {
     background-position: -5px -30px;
     background-size: auto 620px;
+    grid-template-areas: 'logo switcher navigation';
   }
 }
 
@@ -231,17 +233,8 @@ html {
   }
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-
-  width: 100%;
-
-  gap: 31px;
-}
-
 .header__logo {
+  grid-area: logo;
   width: 50px;
   height: auto;
 }
@@ -263,10 +256,74 @@ html {
   list-style-type: none;
 }
 
+.header__navigation {
+  grid-area: navigation;
+}
+
 .header__menu {
   display: flex;
 
   gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu {
+    position: fixed;
+    flex-direction: column;
+    padding: 134px 0 0 127px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    display: none;
+    max-width: 620px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-dark);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu:before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background: var(--color-dark);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: -100%;
+  }
+}
+
+.header__menu-button {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+}
+
+.header__menu-button:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu-button {
+    display: flex;
+    background: no-repeat 50% url('./assets/svg/menu-open-icon.svg');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu-button_opened {
+    display: flex;
+    background: no-repeat 50% url('./assets/svg/menu-close-icon.svg');
+    z-index: 2;
+    position: relative;
+  }
 }
 
 .header__menu-link:hover {
@@ -274,6 +331,7 @@ html {
 }
 
 .header__switcher {
+  grid-area: switcher;
   display: flex;
 
   color: var(--color-light);
