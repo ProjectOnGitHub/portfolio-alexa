@@ -829,14 +829,14 @@ html {
 
   justify-items: end;
 
-  padding: 60px 20px 195px 0;
+  padding: 60px 0 195px;
 }
 
 @media screen and (max-width: 1024px) {
   .contacts {
     background-size: auto 650px;
     justify-items: center;
-    padding: 60px 0 145px 0;
+    padding: 60px 0 145px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -848,10 +848,11 @@ html {
 
 .form__container {
   display: grid;
-
   width: 100%;
-  max-width: 450px;
+  max-width: 490px;
   max-height: 445px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1024px) {
