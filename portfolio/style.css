@@ -266,8 +266,15 @@ html {
   gap: 30px;
 }
 
+@keyframes slideMenu {
+  0% {
+    transform: translate(100%);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header__menu {
+    opacity: 0;
     position: fixed;
     flex-direction: column;
     padding: 134px 0 0 127px;
@@ -275,13 +282,28 @@ html {
     top: 0;
     z-index: 1;
     box-sizing: border-box;
-    display: none;
+    visibility: hidden;
     max-width: 620px;
     width: 100%;
     height: 100vh;
     background-color: var(--color-dark);
     font-size: 35px;
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__menu {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu_opened {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    animation: slideMenu 250ms ease;
   }
 }
 
@@ -322,9 +344,23 @@ html {
 @media screen and (max-width: 768px) {
   .header__menu-button_opened {
     display: flex;
+    position: fixed;
+    top: 20px;
+    right: 60px;
     background: no-repeat 50% url('./assets/svg/menu-close-icon.svg');
     z-index: 2;
-    position: relative;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .header__menu-button_opened {
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__menu-button_opened {
+    right: 20px;
   }
 }
 
