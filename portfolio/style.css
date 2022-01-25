@@ -34,13 +34,8 @@ html {
 
 .common-width {
   display: grid;
-
-  width: 100%;
-  max-width: var(--main-width);
-}
-
-.common-indent {
   padding: 0 20px;
+  width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -97,8 +92,8 @@ html {
   position: relative;
 
   overflow: hidden;
+  width: calc(var(--main-width) / 2 - 20px);
 
-  width: calc(50% - 20px);
   margin: 0 0 60px 0;
 
   text-align: center;
@@ -120,7 +115,7 @@ html {
 @media screen and (max-width: 1024px) {
   .section__title {
     margin-bottom: 50px;
-
+    width: calc(50% - 20px);
     font-size: 36px;
   }
 }
@@ -223,7 +218,8 @@ html {
 
   gap: 31px;
   grid-template-areas: 'logo navigation switcher theme';
-  grid-template-columns: 1fr max-content max-content;
+  grid-template-columns: max-content 1fr max-content;
+  max-width: var(--main-width);
 }
 
 @media screen and (max-width: 1024px) {
@@ -244,6 +240,7 @@ html {
 @media screen and (max-width: 568px) {
   .header {
     background-size: auto 520px;
+    gap: 15px;
   }
 }
 
@@ -267,6 +264,7 @@ html {
 
 .header__navigation {
   grid-area: navigation;
+  justify-self: right;
 }
 
 .header__menu {
@@ -418,6 +416,7 @@ html {
 
   gap: 18px;
   grid-area: switcher;
+  justify-self: right;
 }
 
 .header__switcher-item {
@@ -448,6 +447,12 @@ html {
 
 /* Main */
 /* Hero */
+.main {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
 
 .hero {
   position: relative;
@@ -465,6 +470,7 @@ html {
 
   grid-template-columns: 1fr;
   grid-template-rows: minmax(500px, 820px);
+  max-width: var(--main-width);
 }
 
 @media screen and (max-width: 1024px) {
@@ -770,7 +776,7 @@ html {
   justify-content: center;
 
   box-sizing: border-box;
-  width: 100%;
+  width: var(--main-width);
   padding: 0 20px;
 
   gap: 25px;
@@ -783,11 +789,13 @@ html {
   padding: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1440px) {
   .portfolio__list {
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(280px, 450px));
   }
 }
+
 @media screen and (max-width: 768px) {
   .portfolio__list-item {
     display: grid;
@@ -993,6 +1001,8 @@ html {
 /* Contacts */
 .contacts {
   display: grid;
+  max-width: var(--main-width);
+  width: 100%;
 
   padding: 60px 0 195px;
 
@@ -1139,6 +1149,7 @@ html {
   height: 150px;
 
   grid-template-columns: repeat(3, max-content);
+  max-width: var(--main-width);
 }
 
 @media screen and (max-width: 1024px) {
