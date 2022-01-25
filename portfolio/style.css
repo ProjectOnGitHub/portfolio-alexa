@@ -144,6 +144,7 @@ html {
   padding: 0 20px;
 
   background-color: var(--color-dark);
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -612,6 +613,7 @@ html {
   color: var(--color-light);
 
   gap: 40px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -939,6 +941,8 @@ html {
   font-size: 28px;
   font-weight: 700;
   line-height: 2;
+
+  pointer-events: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -973,6 +977,7 @@ html {
 
   grid-template-columns: 1fr;
   justify-items: center;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -1147,6 +1152,7 @@ html {
     gap: 27px;
     grid-template-columns: auto;
     justify-items: center;
+    background-color: var(--color-dark);
   }
 }
 
@@ -1218,15 +1224,15 @@ html {
 }
 
 .light-theme:hover {
-  color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .light-theme_section-title {
   background-image: linear-gradient(
     to top,
     var(--color-light) 39px,
-    var(--color-decoration) 39px,
-    var(--color-decoration) 41px,
+    var(--color-dark) 39px,
+    var(--color-dark) 41px,
     var(--color-light) 41px
   );
 }

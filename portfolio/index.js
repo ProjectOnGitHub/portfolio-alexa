@@ -2,12 +2,30 @@
 const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
 const themeButton = document.querySelector('.header__theme-button');
-function toggleThemeButton() {
+const activePortfolioButton = document.querySelector('.portfolio__filter-button_active');
+
+const lightThemeMainSelectors = ['.skills', '.portfolio', '.video', '.price', '.skills__list', '.portfolio__filter-button', '.section__title-cover', '.header__menu_opened', '.price__subtitle', '.price__sublist'];
+const lightThemeTitleSelectors = ['.section__title'];
+
+const getSelectors = (arr, selector) => {
+  arr.map((item) => Array
+    .from(document.querySelectorAll(item)))
+    .reduce((acc, cur) => acc.concat(cur))
+    .forEach(item => item.classList.toggle(selector));
+}
+
+const toggleTheme = () => {
+  getSelectors(lightThemeMainSelectors, 'light-theme');
+  getSelectors(lightThemeTitleSelectors, 'light-theme_section-title');
+  activePortfolioButton.classList.remove('light-theme');
+
   themeButton.classList.toggle('header__theme-button_dark');
   themeButton.getAttribute('aria-label') === 'Переключить на светлую тему'
     ? themeButton.setAttribute('aria-label', 'Переключить на тёмную тему')
     : themeButton.setAttribute('aria-label', 'Переключить на светлую тему');
 }
+
+
 
 
 function toggleMenuButton() {
@@ -31,7 +49,7 @@ function closeMenu(e) {
 menuButton.addEventListener('click', toggleMenuButton);
 
 menu.addEventListener('click', closeMenu);
-themeButton.addEventListener('click', toggleThemeButton);
+themeButton.addEventListener('click', toggleTheme);
 
 
 
