@@ -429,9 +429,7 @@ html {
 
 /* Main */
 /* Hero */
-.main {
-  width: var(--main-width);
-}
+
 .hero {
   position: relative;
 
