@@ -1,6 +1,13 @@
 
 const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
+const themeButton = document.querySelector('.header__theme-button');
+function toggleThemeButton() {
+  themeButton.classList.toggle('header__theme-button_dark');
+  themeButton.getAttribute('aria-label') === 'Переключить на светлую тему'
+    ? themeButton.setAttribute('aria-label', 'Переключить на тёмную тему')
+    : themeButton.setAttribute('aria-label', 'Переключить на светлую тему');
+}
 
 
 function toggleMenuButton() {
@@ -9,6 +16,7 @@ function toggleMenuButton() {
   menuButton.getAttribute('aria-label') === 'Открыть меню'
     ? menuButton.setAttribute('aria-label', 'Закрыть меню')
     : menuButton.setAttribute('aria-label', 'Открыть меню');
+
 }
 
 function closeMenu(e) {
@@ -23,6 +31,9 @@ function closeMenu(e) {
 menuButton.addEventListener('click', toggleMenuButton);
 
 menu.addEventListener('click', closeMenu);
+themeButton.addEventListener('click', toggleThemeButton);
+
+
 
 console.log(`
 Ваша отметка - 83 балла(ов)
