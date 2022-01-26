@@ -10,8 +10,6 @@ const lightThemeTitleSelectors = ['.section__title'];
 const lightThemeMenuSelectors = ['.header__menu', '.header__menu-link'];
 const lightThemePortfolioSelectors = ['.portfolio__filter-button'];
 
-
-
 const getSelectors = (arr, selector) => {
   arr.map((item) => Array
     .from(document.querySelectorAll(item)))
@@ -33,7 +31,7 @@ const toggleTheme = () => {
     : themeButton.setAttribute('aria-label', 'Переключить на светлую тему');
 }
 
-function toggleMenuButton() {
+const toggleMenuButton = () => {
   menu.classList.toggle('header__menu_opened');
   menuButton.getAttribute('aria-label') === 'Открыть меню'
     ? menuButton.setAttribute('aria-label', 'Закрыть меню')
@@ -41,14 +39,9 @@ function toggleMenuButton() {
   menu.classList.contains('light-theme__burger-menu')
     ? menuButton.classList.toggle('light-theme__burger-menu-button')
     : menuButton.classList.toggle('header__menu-button_opened');
-
 }
 
-
-
-
-
-function closeMenu(e) {
+const closeMenu = (e) => {
   if (e.target.classList.contains('header__menu-link')) {
     menuButton.classList.remove('light-theme__burger-menu-button');
     menuButton.classList.remove('header__menu-button_opened');
@@ -58,8 +51,6 @@ function closeMenu(e) {
 }
 
 menuButton.addEventListener('click', toggleMenuButton);
-
 menu.addEventListener('click', closeMenu);
-
 themeButton.addEventListener('click', toggleTheme);
 
