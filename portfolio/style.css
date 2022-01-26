@@ -39,24 +39,24 @@ html {
 }
 
 @media screen and (max-width: 1024px) {
-  .common-indent {
+  .common-width {
     padding: 0 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  .common-indent {
+  .common-width {
     padding: 0 60px;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .common-indent {
+  .common-width {
     padding: 0 40px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .common-indent {
+  .common-width {
     padding: 0 20px;
   }
 }
