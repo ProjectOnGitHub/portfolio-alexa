@@ -767,6 +767,7 @@ html {
 }
 
 .portfolio__filter-button_active {
+  pointer-events: none;
   color: var(--color-dark);
   background-color: var(--color-decoration);
 }
@@ -1234,11 +1235,49 @@ html {
   color: var(--color-dark);
 }
 
+@media screen and (max-width: 768px) {
+  .light-theme__burger-menu {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .light-theme__burger-menu {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .light-theme__burger-menu-button {
+    position: fixed;
+    z-index: 2;
+    top: 20px;
+    right: 60px;
+
+    display: flex;
+    background: no-repeat 50% url(./assets/svg/menu-close-icon-dark.svg);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .light-theme__burger-menu-button {
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .light-theme__burger-menu-button {
+    right: 20px;
+  }
+}
+
 .light-theme:hover {
   color: var(--color-light);
 }
 
-.light-theme_section-title {
+.light-theme__section-title {
   background-image: linear-gradient(
     to top,
     var(--color-light) 39px,
@@ -1246,4 +1285,18 @@ html {
     var(--color-dark) 41px,
     var(--color-light) 41px
   );
+}
+.light-theme__portfolio-button {
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+.light-theme__portfolio-button:hover {
+  background: var(--color-decoration);
+}
+
+.light-theme__portfolio-button_active {
+  pointer-events: none;
+  background: var(--color-decoration);
+  color: var(--color-light);
 }
