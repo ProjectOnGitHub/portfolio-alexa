@@ -5,11 +5,29 @@ const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
 const themeButton = document.querySelector('.header__theme-button');
 const activePortfolioButton = document.querySelector('.portfolio__filter-button_active');
+const langSwitcher = document.querySelector('.header__switcher');
+const langRuButton = langSwitcher.querySelector('[name=ru]');
+const langEnButton = langSwitcher.querySelector('[name=en]');
+
 
 const lightThemeMainSelectors = ['.skills', '.portfolio', '.video', '.price', '.skills__list', '.section__title-cover', '.price__subtitle', '.price__sublist'];
 const lightThemeTitleSelectors = ['.section__title'];
 const lightThemeMenuSelectors = ['.header__menu', '.header__menu-link'];
 const lightThemePortfolioSelectors = ['.portfolio__filter-button'];
+
+const switchLanguage = (e) => {
+  if (e.target === langRuButton) {
+    langRuButton.classList.add('header__switcher-button_active');
+    langEnButton.classList.remove('header__switcher-button_active');
+  }
+  if (e.target === langEnButton) {
+    langRuButton.classList.remove('header__switcher-button_active');
+    langEnButton.classList.add('header__switcher-button_active');
+  }
+  return getTranslate(e.target.name);
+}
+
+
 
 const getSelectors = (arr, selector) => {
   arr.map((item) => Array
@@ -51,6 +69,16 @@ const closeMenu = (e) => {
   }
 }
 
+const getTranslate = (lang) => {
+  document.querySelectorAll('[data-i18]')
+    .forEach(item => item.textContent = i18Obj[lang][item.dataset.i18]);
+}
+
+
+
 menuButton.addEventListener('click', toggleMenuButton);
 menu.addEventListener('click', closeMenu);
 themeButton.addEventListener('click', toggleTheme);
+langSwitcher.addEventListener('click', switchLanguage);
+
+
