@@ -45,16 +45,10 @@ const toggleTheme = () => {
   activePortfolioButton.classList.toggle('light-theme__portfolio-button_active');
   themeButton.classList.toggle('header__theme-button_dark');
 
-  themeButton.getAttribute('aria-label') === 'Переключить на светлую тему'
-    ? themeButton.setAttribute('aria-label', 'Переключить на тёмную тему')
-    : themeButton.setAttribute('aria-label', 'Переключить на светлую тему');
 }
 
 const toggleMenuButton = () => {
   menu.classList.toggle('header__menu_opened');
-  menuButton.getAttribute('aria-label') === 'Открыть меню'
-    ? menuButton.setAttribute('aria-label', 'Закрыть меню')
-    : menuButton.setAttribute('aria-label', 'Открыть меню');
   menu.classList.contains('light-theme__burger-menu')
     ? menuButton.classList.toggle('light-theme__burger-menu-button')
     : menuButton.classList.toggle('header__menu-button_opened');
@@ -65,7 +59,6 @@ const closeMenu = (e) => {
     menuButton.classList.remove('light-theme__burger-menu-button');
     menuButton.classList.remove('header__menu-button_opened');
     menu.classList.remove('header__menu_opened');
-    menuButton.setAttribute('aria-label', 'Открыть меню')
   }
 }
 
