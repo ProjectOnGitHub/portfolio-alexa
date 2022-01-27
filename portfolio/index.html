@@ -28,27 +28,42 @@
           ></button>
           <ul class="header__menu list">
             <li class="header__menu-item">
-              <a href="#skills" class="header__menu-link link hover-effect"
+              <a
+                href="#skills"
+                class="header__menu-link link hover-effect"
+                data-i18="skills"
                 >Skills</a
               >
             </li>
             <li class="header__menu-item">
-              <a href="#portfolio" class="header__menu-link link hover-effect"
+              <a
+                href="#portfolio"
+                class="header__menu-link link hover-effect"
+                data-i18="portfolio"
                 >Portfolio</a
               >
             </li>
             <li class="header__menu-item">
-              <a href="#video" class="header__menu-link link hover-effect"
+              <a
+                href="#video"
+                class="header__menu-link link hover-effect"
+                data-i18="video"
                 >Video</a
               >
             </li>
             <li class="header__menu-item">
-              <a href="#price" class="header__menu-link link hover-effect"
+              <a
+                href="#price"
+                class="header__menu-link link hover-effect"
+                data-i18="price"
                 >Price</a
               >
             </li>
             <li class="header__menu-item">
-              <a href="#contacts" class="header__menu-link link hover-effect"
+              <a
+                href="#contacts"
+                class="header__menu-link link hover-effect"
+                data-i18="contacts"
                 >Contacts</a
               >
             </li>
@@ -75,8 +90,8 @@
       <main class="main">
         <section class="hero">
           <div class="hero__container">
-            <h1 class="hero__title">Alexa Rise</h1>
-            <p class="hero__text">
+            <h1 class="hero__title" data-i18="hero-title">Alexa Rise</h1>
+            <p class="hero__text" data-i18="hero-text">
               Save sincere emotions, romantic feelings and happy moments of life
               together with professional photographer Alexa Rise
             </p>
@@ -84,6 +99,7 @@
               type="button"
               class="hero__button button hover-effect"
               aria-label="Hire me"
+              data-i18="hire"
             >
               Hire me
             </button>
@@ -91,15 +107,17 @@
         </section>
         <section id="skills" class="skills section">
           <h2 class="section__title">
-            <span class="section__title-cover">Skills</span>
+            <span class="section__title-cover" data-i18="skills">Skills</span>
           </h2>
           <ul class="skills__list list">
             <li class="skills__list-item">
               <svg class="skills__icon icon">
                 <use xlink:href="./assets/svg/sprite.svg#camera-icon"></use>
               </svg>
-              <h3 class="skills__subtitle">Digital photography</h3>
-              <p class="skills__text">
+              <h3 class="skills__subtitle" data-i18="skill-title-1">
+                Digital photography
+              </h3>
+              <p class="skills__text" data-i18="skill-text-1">
                 High-quality photos in the studio and on the nature
               </p>
             </li>
@@ -107,8 +125,10 @@
               <svg class="skills__icon icon">
                 <use xlink:href="./assets/svg/sprite.svg#video-icon"></use>
               </svg>
-              <h3 class="skills__subtitle">Video shooting</h3>
-              <p class="skills__text">
+              <h3 class="skills__subtitle" data-i18="skill-title-2">
+                Video shooting
+              </h3>
+              <p class="skills__text" data-i18="skill-text-2">
                 Capture your moments so that they always stay with you
               </p>
             </li>
@@ -116,8 +136,8 @@
               <svg class="skills__icon icon">
                 <use xlink:href="./assets/svg/sprite.svg#image-icon"></use>
               </svg>
-              <h3 class="skills__subtitle">Retouch</h3>
-              <p class="skills__text">
+              <h3 class="skills__subtitle" data-i18="skill-title-3">Retouch</h3>
+              <p class="skills__text" data-i18="skill-text-3">
                 I strive to make photography surpass reality
               </p>
             </li>
@@ -125,8 +145,8 @@
               <svg class="skills__icon icon">
                 <use xlink:href="./assets/svg/sprite.svg#microphone-icon"></use>
               </svg>
-              <h3 class="skills__subtitle">Audio</h3>
-              <p class="skills__text">
+              <h3 class="skills__subtitle" data-i18="skill-title-4">Audio</h3>
+              <p class="skills__text" data-i18="skill-text-4">
                 Professional sounds recording for video, advertising, portfolio
               </p>
             </li>
@@ -134,7 +154,9 @@
         </section>
         <section id="portfolio" class="portfolio section">
           <h2 class="section__title">
-            <span class="section__title-cover">Portfolio</span>
+            <span class="section__title-cover" data-i18="portfolio"
+              >Portfolio</span
+            >
           </h2>
           <ul class="portfolio__filter list">
             <li class="portfolio__filter-item">
@@ -142,6 +164,7 @@
                 type="button"
                 class="portfolio__filter-button button hover-effect"
                 aria-label="Choose winters's photos"
+                data-i18="winter"
               >
                 Winter
               </button>
@@ -151,6 +174,7 @@
                 type="button"
                 class="portfolio__filter-button button hover-effect"
                 aria-label="Choose spring's photos"
+                data-i18="spring"
               >
                 Spring
               </button>
@@ -160,6 +184,7 @@
                 type="button"
                 class="portfolio__filter-button button hover-effect"
                 aria-label="Choose summer's photos"
+                data-i18="summer"
               >
                 Summer
               </button>
@@ -169,6 +194,7 @@
                 type="button"
                 class="portfolio__filter-button button portfolio__filter-button_active hover-effect"
                 aria-label="Choose autumn's photos"
+                data-i18="autumn"
               >
                 Autumn
               </button>
@@ -221,7 +247,7 @@
         </section>
         <section id="video" class="video section">
           <h2 class="section__title">
-            <span class="section__title-cover">Video</span>
+            <span class="section__title-cover" data-i18="video">Video</span>
           </h2>
           <div class="video__player">
             <img
@@ -238,23 +264,49 @@
         </section>
         <section id="price" class="price section">
           <h2 class="section__title">
-            <span class="section__title-cover">Price</span>
+            <span class="section__title-cover" data-i18="price">Price</span>
           </h2>
           <ul class="price__list list">
             <li class="price__list-item">
               <h3 class="price__subtitle">Standard</h3>
               <p class="price__text">500 $</p>
               <ul class="price__sublist list">
-                <li class="price__sublist-item">One location</li>
-                <li class="price__sublist-item">120 photos in color</li>
-                <li class="price__sublist-item">12 photos in retouch</li>
-                <li class="price__sublist-item">Readiness 2-3 weeks</li>
-                <li class="price__sublist-item">Make up, visage</li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-1-span-1"
+                >
+                  One location
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-1-span-2"
+                >
+                  120 photos in color
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-1-span-3"
+                >
+                  12 photos in retouch
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-1-span-4"
+                >
+                  Readiness 2-3 weeks
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-1-span-5"
+                >
+                  Make up, visage
+                </li>
               </ul>
               <button
                 type="button"
                 class="price__list-button button hover-effect"
                 aria-label="Order shooting"
+                data-i18="order"
               >
                 Order shooting
               </button>
@@ -263,16 +315,42 @@
               <h3 class="price__subtitle">Premium</h3>
               <p class="price__text">700 $</p>
               <ul class="price__sublist list">
-                <li class="price__sublist-item">One or two locations</li>
-                <li class="price__sublist-item">200 photos in color</li>
-                <li class="price__sublist-item">20 photos in retouch</li>
-                <li class="price__sublist-item">Readiness 1-2 weeks</li>
-                <li class="price__sublist-item">Make up, visage</li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-2-span-1"
+                >
+                  One or two locations
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-2-span-2"
+                >
+                  200 photos in color
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-2-span-3"
+                >
+                  20 photos in retouch
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-2-span-4"
+                >
+                  Readiness 1-2 weeks
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-2-span-5"
+                >
+                  Make up, visage
+                </li>
               </ul>
               <button
                 type="button"
                 class="price__list-button button hover-effect"
                 aria-label="Order shooting"
+                data-i18="order"
               >
                 Order shooting
               </button>
@@ -281,16 +359,42 @@
               <h3 class="price__subtitle">Gold</h3>
               <p class="price__text">1000 $</p>
               <ul class="price__sublist list">
-                <li class="price__sublist-item">Three locations or more</li>
-                <li class="price__sublist-item">300 photos in color</li>
-                <li class="price__sublist-item">50 photos in retouch</li>
-                <li class="price__sublist-item">Readiness 1 weeks</li>
-                <li class="price__sublist-item">Make up, visage, hairstyle</li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-3-span-1"
+                >
+                  Three locations or more
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-3-span-2"
+                >
+                  300 photos in color
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-3-span-3"
+                >
+                  50 photos in retouch
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-3-span-4"
+                >
+                  Readiness 1 week
+                </li>
+                <li
+                  class="price__sublist-item"
+                  data-i18="price-description-3-span-5"
+                >
+                  Make up, visage, hairstyle
+                </li>
               </ul>
               <button
                 type="button"
                 class="price__list-button button hover-effect"
                 aria-label="Order shooting"
+                data-i18="order"
               >
                 Order shooting
               </button>
@@ -299,7 +403,7 @@
         </section>
         <section id="contacts" class="contacts">
           <form class="form__container">
-            <h2 class="form__title">Contact me</h2>
+            <h2 class="form__title" data-i18="contact-me">Contact me</h2>
             <fieldset class="form__fieldset">
               <input
                 name="email"
@@ -322,6 +426,7 @@
                 type="submit"
                 class="form__button button hover-effect"
                 aria-label="Send message"
+                data-i18="send-message"
               >
                 Send message
               </button>
@@ -378,6 +483,6 @@
         </ul>
       </footer>
     </div>
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

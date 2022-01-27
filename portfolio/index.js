@@ -1,9 +1,10 @@
 
+import i18Obj from './assets/scripts/translate.js';
+
 const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
 const themeButton = document.querySelector('.header__theme-button');
 const activePortfolioButton = document.querySelector('.portfolio__filter-button_active');
-const pageWidth = document.documentElement.scrollWidth;
 
 const lightThemeMainSelectors = ['.skills', '.portfolio', '.video', '.price', '.skills__list', '.section__title-cover', '.price__subtitle', '.price__sublist'];
 const lightThemeTitleSelectors = ['.section__title'];
@@ -53,4 +54,3 @@ const closeMenu = (e) => {
 menuButton.addEventListener('click', toggleMenuButton);
 menu.addEventListener('click', closeMenu);
 themeButton.addEventListener('click', toggleTheme);
-
