@@ -12,8 +12,8 @@ const lightThemeMenuSelectors = ['.header__menu', '.header__menu-link'];
 const lightThemePortfolioSelectors = ['.portfolio__filter-button'];
 
 const langSwitcher = document.querySelector('.header__switcher');
-const langRuButton = langSwitcher.querySelector('[name=ru]');
-const langEnButton = langSwitcher.querySelector('[name=en]');
+const langButtons = langSwitcher.querySelectorAll('.header__switcher-button');
+
 
 const portfolioFilter = document.querySelector('.portfolio__filter');
 const portfolioButtons = portfolioFilter.querySelectorAll('.portfolio__filter-button');
@@ -61,13 +61,9 @@ const toggleTheme = () => {
 }
 
 const switchLanguage = (e) => {
-  if (e.target === langRuButton) {
-    langRuButton.classList.add('header__switcher-button_active');
-    langEnButton.classList.remove('header__switcher-button_active');
-  }
-  if (e.target === langEnButton) {
-    langRuButton.classList.remove('header__switcher-button_active');
-    langEnButton.classList.add('header__switcher-button_active');
+  if (e.target.classList.contains('header__switcher-button')) {
+    langButtons.forEach(item => item.classList.remove('active'));
+    e.target.classList.add('active');
   }
   return getTranslate(e.target.name);
 }

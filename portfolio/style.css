@@ -443,7 +443,7 @@ html {
   color: var(--color-decoration);
 }
 
-.header__switcher-button_active {
+.header__switcher-button.active {
   color: var(--color-decoration);
 }
 
