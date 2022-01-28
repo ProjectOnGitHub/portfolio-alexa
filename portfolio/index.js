@@ -4,7 +4,7 @@ import i18Obj from './assets/scripts/translate.js';
 const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
 const themeButton = document.querySelector('.header__theme-button');
-const activePortfolioButton = document.querySelector('.portfolio__filter-button_active');
+const activePortfolioButton = document.querySelector('.active');
 
 const lightThemeMainSelectors = ['.skills', '.portfolio', '.video', '.price', '.skills__list', '.section__title-cover', '.price__subtitle', '.price__sublist'];
 const lightThemeTitleSelectors = ['.section__title'];
@@ -22,8 +22,8 @@ const portfolioImages = document.querySelectorAll('.portfolio__photo');
 
 const changeImage = (e) => {
   if (e.target.classList.contains('portfolio__filter-button')) {
-    portfolioButtons.forEach(item => item.classList.remove('portfolio__filter-button_active'));
-    e.target.classList.add('portfolio__filter-button_active');
+    portfolioButtons.forEach(item => item.classList.remove('active'));
+    e.target.classList.add('active');
   }
 }
 
@@ -56,7 +56,7 @@ const toggleTheme = () => {
   getSelectors(lightThemeTitleSelectors, 'light-theme__section-title');
   getSelectors(lightThemeMenuSelectors, 'light-theme__burger-menu');
   getSelectors(lightThemePortfolioSelectors, 'light-theme__portfolio-button');
-  activePortfolioButton.classList.toggle('light-theme__portfolio-button_active');
+  activePortfolioButton.classList.toggle('active');
   themeButton.classList.toggle('header__theme-button_dark');
 }
 

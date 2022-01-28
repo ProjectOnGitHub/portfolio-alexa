@@ -768,7 +768,7 @@ html {
   background-color: var(--color-dark);
 }
 
-.portfolio__filter-button_active {
+.portfolio__filter-button.active {
   pointer-events: none;
   color: var(--color-dark);
   background-color: var(--color-decoration);
@@ -1297,7 +1297,7 @@ html {
   background: var(--color-decoration);
 }
 
-.light-theme__portfolio-button_active {
+.light-theme__portfolio-button.active {
   pointer-events: none;
   background: var(--color-decoration);
   color: var(--color-light);
