@@ -15,6 +15,20 @@ const langSwitcher = document.querySelector('.header__switcher');
 const langRuButton = langSwitcher.querySelector('[name=ru]');
 const langEnButton = langSwitcher.querySelector('[name=en]');
 
+const portfolioFilter = document.querySelector('.portfolio__filter');
+const portfolioButtons = portfolioFilter.querySelectorAll('.portfolio__filter-button');
+const portfolioImages = document.querySelectorAll('.portfolio__photo');
+
+
+const changeImage = (e) => {
+  if (e.target.classList.contains('portfolio__filter-button')) {
+    portfolioButtons.forEach(item => item.classList.remove('portfolio__filter-button_active'));
+    e.target.classList.add('portfolio__filter-button_active');
+  }
+}
+
+portfolioFilter.addEventListener('click', changeImage);
+
 const toggleMenuButton = () => {
   menu.classList.toggle('header__menu_opened');
   menu.classList.contains('light-theme__burger-menu')
@@ -42,7 +56,6 @@ const toggleTheme = () => {
   getSelectors(lightThemeTitleSelectors, 'light-theme__section-title');
   getSelectors(lightThemeMenuSelectors, 'light-theme__burger-menu');
   getSelectors(lightThemePortfolioSelectors, 'light-theme__portfolio-button');
-  activePortfolioButton.classList.remove('light-theme__portfolio-button');
   activePortfolioButton.classList.toggle('light-theme__portfolio-button_active');
   themeButton.classList.toggle('header__theme-button_dark');
 }
