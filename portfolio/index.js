@@ -24,6 +24,8 @@ const changeImage = (e) => {
   if (e.target.classList.contains('portfolio__filter-button')) {
     portfolioButtons.forEach(item => item.classList.remove('active'));
     e.target.classList.add('active');
+    portfolioImages.forEach((img, index) =>
+      img.src = `./assets/img/${e.target.dataset.i18}/${index + 1}.jpg`);
   }
 }
 
