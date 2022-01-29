@@ -27,6 +27,8 @@ function getLocalStorage() {
     const lang = localStorage.getItem('lang');
     document.querySelector(`[name=${lang}]`).classList.add('active');
     getTranslate(lang);
+  } else {
+    document.querySelector(`[name='en']`).classList.add('active');
   }
 }
 window.addEventListener('load', getLocalStorage)
