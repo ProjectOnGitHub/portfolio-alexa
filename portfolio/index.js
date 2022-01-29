@@ -25,6 +25,7 @@ function setLocalStorage(lang) {
 function getLocalStorage() {
   if (localStorage.getItem('lang')) {
     const lang = localStorage.getItem('lang');
+    document.querySelector(`[name=${lang}]`).classList.add('active');
     getTranslate(lang);
   }
 }
@@ -82,7 +83,7 @@ const switchLanguage = (e) => {
   return getTranslate(e.target.name);
 }
 
-const getTranslate = (lang) => {
+const getTranslate = (lang = 'en') => {
   document.querySelectorAll('[data-i18]')
     .forEach(item => item.textContent = i18Obj[lang][item.dataset.i18]);
 }
