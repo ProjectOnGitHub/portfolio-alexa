@@ -4,7 +4,6 @@ import i18Obj from './assets/scripts/translate.js';
 const menu = document.querySelector('.header__menu');
 const menuButton = document.querySelector('.header__menu-button');
 const themeButton = document.querySelector('.header__theme-button');
-const activePortfolioButton = document.querySelector('.active');
 
 const lightThemeMainSelectors = ['.skills', '.portfolio', '.video', '.price', '.skills__list', '.section__title-cover', '.price__subtitle', '.price__sublist'];
 const lightThemeTitleSelectors = ['.section__title'];
@@ -18,6 +17,19 @@ const langButtons = langSwitcher.querySelectorAll('.header__switcher-button');
 const portfolioFilter = document.querySelector('.portfolio__filter');
 const portfolioButtons = portfolioFilter.querySelectorAll('.portfolio__filter-button');
 const portfolioImages = document.querySelectorAll('.portfolio__photo');
+
+function setLocalStorage(lang) {
+  localStorage.setItem('lang', lang);
+}
+
+function getLocalStorage() {
+  if (localStorage.getItem('lang')) {
+    const lang = localStorage.getItem('lang');
+    getTranslate(lang);
+  }
+}
+window.addEventListener('load', getLocalStorage)
+
 
 
 const changeImage = (e) => {
@@ -58,13 +70,13 @@ const toggleTheme = () => {
   getSelectors(lightThemeTitleSelectors, 'light-theme__section-title');
   getSelectors(lightThemeMenuSelectors, 'light-theme__burger-menu');
   getSelectors(lightThemePortfolioSelectors, 'light-theme__portfolio-button');
-  activePortfolioButton.classList.toggle('active');
   themeButton.classList.toggle('header__theme-button_dark');
 }
 
 const switchLanguage = (e) => {
   if (e.target.classList.contains('header__switcher-button')) {
     langButtons.forEach(item => item.classList.remove('active'));
+    setLocalStorage(e.target.name);
     e.target.classList.add('active');
   }
   return getTranslate(e.target.name);
