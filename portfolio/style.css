@@ -34,8 +34,9 @@ html {
 
 .common-width {
   display: grid;
-  padding: 0 20px;
+
   width: 100%;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -92,8 +93,8 @@ html {
   position: relative;
 
   overflow: hidden;
-  width: calc(var(--main-width) / 2 - 20px);
 
+  width: calc(var(--main-width) / 2 - 20px);
   margin: 0 0 60px 0;
 
   text-align: center;
@@ -114,8 +115,9 @@ html {
 
 @media screen and (max-width: 1024px) {
   .section__title {
-    margin-bottom: 50px;
     width: calc(50% - 20px);
+    margin-bottom: 50px;
+
     font-size: 36px;
   }
 }
@@ -138,8 +140,9 @@ html {
 .section__title-cover {
   padding: 0 20px;
 
-  background-color: var(--color-dark);
   pointer-events: none;
+
+  background-color: var(--color-dark);
 }
 
 @media screen and (max-width: 1024px) {
@@ -210,6 +213,7 @@ html {
   justify-content: space-between;
 
   box-sizing: border-box;
+  max-width: var(--main-width);
   height: 90px;
 
   background: url(./assets/img/header-background.jpg);
@@ -219,7 +223,6 @@ html {
   gap: 31px;
   grid-template-areas: 'logo navigation switcher theme';
   grid-template-columns: max-content 1fr max-content;
-  max-width: var(--main-width);
 }
 
 @media screen and (max-width: 1024px) {
@@ -240,6 +243,7 @@ html {
 @media screen and (max-width: 568px) {
   .header {
     background-size: auto 520px;
+
     gap: 15px;
   }
 }
@@ -392,10 +396,12 @@ html {
 .header__theme-button {
   width: 45px;
   height: 45px;
-  grid-area: theme;
+
   border: none;
-  background-color: transparent;
   background: no-repeat 50% url('./assets/svg/theme-switcher-light-icon.svg');
+  background-color: transparent;
+
+  grid-area: theme;
 }
 
 .header__theme-button_dark {
@@ -433,10 +439,10 @@ html {
 
 .header__switcher-button {
   text-decoration: none;
-  background: transparent;
-  border: none;
 
   color: var(--color-light);
+  border: none;
+  background: transparent;
 }
 
 .header__switcher-button:hover {
@@ -451,7 +457,9 @@ html {
 /* Hero */
 .main {
   display: grid;
+
   width: 100%;
+
   grid-template-columns: 1fr;
   justify-items: center;
 }
@@ -463,6 +471,7 @@ html {
 
   box-sizing: border-box;
   width: 100%;
+  max-width: var(--main-width);
   height: 100%;
   max-height: 820px;
 
@@ -472,7 +481,6 @@ html {
 
   grid-template-columns: 1fr;
   grid-template-rows: minmax(500px, 820px);
-  max-width: var(--main-width);
 }
 
 @media screen and (max-width: 1024px) {
@@ -618,10 +626,11 @@ html {
 
   width: 100%;
 
+  pointer-events: none;
+
   color: var(--color-light);
 
   gap: 40px;
-  pointer-events: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -770,6 +779,7 @@ html {
 
 .portfolio__filter-button.active {
   pointer-events: none;
+
   color: var(--color-dark);
   background-color: var(--color-decoration);
 }
@@ -795,6 +805,7 @@ html {
 @media screen and (max-width: 1440px) {
   .portfolio__list {
     width: 100%;
+
     grid-template-columns: repeat(auto-fit, minmax(280px, 450px));
   }
 }
@@ -948,12 +959,12 @@ html {
 .price__subtitle {
   margin: 0;
 
+  pointer-events: none;
+
   font-family: 'Merriweather';
   font-size: 28px;
   font-weight: 700;
   line-height: 2;
-
-  pointer-events: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -984,11 +995,12 @@ html {
 
   height: 180px;
 
+  pointer-events: none;
+
   font-size: 18px;
 
   grid-template-columns: 1fr;
   justify-items: center;
-  pointer-events: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -1004,9 +1016,9 @@ html {
 /* Contacts */
 .contacts {
   display: grid;
-  max-width: var(--main-width);
-  width: 100%;
 
+  width: 100%;
+  max-width: var(--main-width);
   padding: 60px 0 195px;
 
   background: url('./assets/img/contacts-background.jpg');
@@ -1149,10 +1161,10 @@ html {
   justify-content: space-between;
 
   box-sizing: border-box;
+  max-width: var(--main-width);
   height: 150px;
 
   grid-template-columns: repeat(3, max-content);
-  max-width: var(--main-width);
 }
 
 @media screen and (max-width: 1024px) {
@@ -1163,10 +1175,11 @@ html {
     height: 190px;
     padding: 20px 0 30px;
 
+    background-color: var(--color-dark);
+
     gap: 27px;
     grid-template-columns: auto;
     justify-items: center;
-    background-color: var(--color-dark);
   }
 }
 
@@ -1233,21 +1246,21 @@ html {
 
 /*Light Theme*/
 .light-theme {
-  background-color: var(--color-light);
   color: var(--color-dark);
+  background-color: var(--color-light);
 }
 
 @media screen and (max-width: 768px) {
   .light-theme__burger-menu {
-    background-color: var(--color-light);
     color: var(--color-dark);
+    background-color: var(--color-light);
   }
 }
 
 @media screen and (max-width: 768px) {
   .light-theme__burger-menu {
-    background-color: var(--color-light);
     color: var(--color-dark);
+    background-color: var(--color-light);
   }
 }
 
@@ -1259,6 +1272,7 @@ html {
     right: 60px;
 
     display: flex;
+
     background: no-repeat 50% url(./assets/svg/menu-close-icon-dark.svg);
   }
 }
@@ -1289,8 +1303,8 @@ html {
   );
 }
 .light-theme__portfolio-button {
-  background: var(--color-light);
   color: var(--color-dark);
+  background: var(--color-light);
 }
 
 .light-theme__portfolio-button:hover {
@@ -1299,6 +1313,7 @@ html {
 
 .light-theme__portfolio-button.active {
   pointer-events: none;
-  background: var(--color-decoration);
+
   color: var(--color-light);
+  background: var(--color-decoration);
 }
