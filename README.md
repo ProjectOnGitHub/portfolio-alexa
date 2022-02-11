@@ -1,3 +1,9 @@
-# projectongithub-JSFEPRESCHOOL
+# Сайт-портфолио фотографа
 
-Private repository for @projectongithub
+Адаптивный одностраничный сайт фотографа.
+Можно:
+
+- менять тему с тёмной на светлую;
+- переключать язык с английского на русский.
+
+[Сайт](https://projectongithub.github.io/portfolio-alexa/)
