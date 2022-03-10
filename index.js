@@ -18,9 +18,19 @@ const portfolioFilter = document.querySelector('.portfolio__filter');
 const portfolioButtons = portfolioFilter.querySelectorAll('.portfolio__filter-button');
 const portfolioImages = document.querySelectorAll('.portfolio__photo');
 
-function setLocalStorage(lang) {
-  localStorage.setItem('lang', lang);
+
+
+
+
+// JSON.parse(localStorage.getItem("myKey")) 
+function setLocalStorage(name, value) {
+  localStorage.setItem(`${name}`, value)
 }
+
+
+// function setLocalStorage(lang) {
+//   localStorage.setItem('lang', lang);
+// }
 
 function getLocalStorage() {
   if (localStorage.getItem('lang')) {
@@ -79,7 +89,7 @@ const toggleTheme = () => {
 const switchLanguage = (e) => {
   if (e.target.classList.contains('header__switcher-button')) {
     langButtons.forEach(item => item.classList.remove('active'));
-    setLocalStorage(e.target.name);
+    setLocalStorage("lang", e.target.name);
     e.target.classList.add('active');
   }
   return getTranslate(e.target.name);
