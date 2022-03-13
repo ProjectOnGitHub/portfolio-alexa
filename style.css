@@ -404,7 +404,7 @@ html {
   grid-area: theme;
 }
 
-.header__theme-button_dark {
+.header__theme-button.active {
   background: no-repeat 50% url('./assets/svg/theme-switcher-dark-icon.svg');
 }
 

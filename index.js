@@ -22,17 +22,11 @@ const portfolioImages = document.querySelectorAll('.portfolio__photo');
 
 
 
-// JSON.parse(localStorage.getItem("myKey")) 
 function setLocalStorage(name, value) {
   localStorage.setItem(`${name}`, value)
 }
 
-
-// function setLocalStorage(lang) {
-//   localStorage.setItem('lang', lang);
-// }
-
-function getLocalStorage() {
+function getLocalStorageLang() {
   if (localStorage.getItem('lang')) {
     const lang = localStorage.getItem('lang');
     document.querySelector(`[name=${lang}]`).classList.add('active');
@@ -41,9 +35,31 @@ function getLocalStorage() {
     document.querySelector(`[name='en']`).classList.add('active');
   }
 }
-window.addEventListener('load', getLocalStorage)
 
 
+function getLocalStorageTheme() {
+  const theme = localStorage.getItem('lightTheme');
+  if (theme === "enabled") {
+    toggleTheme();
+  }
+}
+
+window.addEventListener('load', getLocalStorageLang);
+
+
+const toggleTheme = () => {
+  themeButton.classList.toggle('active');
+  getSelectors(lightThemeMainSelectors, 'light-theme');
+  getSelectors(lightThemeTitleSelectors, 'light-theme__section-title');
+  getSelectors(lightThemeMenuSelectors, 'light-theme__burger-menu');
+  getSelectors(lightThemePortfolioSelectors, 'light-theme__portfolio-button');
+  if (themeButton.classList.contains('active')) {
+    setLocalStorage("lightTheme", "enabled");
+  } else { setLocalStorage("lightTheme", "disabled") };
+}
+
+
+window.addEventListener('load', getLocalStorageTheme);
 
 const changeImage = (e) => {
   if (e.target.classList.contains('portfolio__filter-button')) {
@@ -78,13 +94,7 @@ const getSelectors = (arr, selector) => {
     .forEach(item => item.classList.toggle(selector));
 }
 
-const toggleTheme = () => {
-  getSelectors(lightThemeMainSelectors, 'light-theme');
-  getSelectors(lightThemeTitleSelectors, 'light-theme__section-title');
-  getSelectors(lightThemeMenuSelectors, 'light-theme__burger-menu');
-  getSelectors(lightThemePortfolioSelectors, 'light-theme__portfolio-button');
-  themeButton.classList.toggle('header__theme-button_dark');
-}
+
 
 const switchLanguage = (e) => {
   if (e.target.classList.contains('header__switcher-button')) {
