@@ -1,4 +1,3 @@
-
 import i18Obj from './assets/scripts/translate.js';
 
 const menu = document.querySelector('.header__menu');
@@ -13,39 +12,31 @@ const lightThemePortfolioSelectors = ['.portfolio__filter-button'];
 const langSwitcher = document.querySelector('.header__switcher');
 const langButtons = langSwitcher.querySelectorAll('.header__switcher-button');
 
-
 const portfolioFilter = document.querySelector('.portfolio__filter');
 const portfolioButtons = portfolioFilter.querySelectorAll('.portfolio__filter-button');
 const portfolioImages = document.querySelectorAll('.portfolio__photo');
 
+const getTranslate = (lang = 'en') => document.querySelectorAll('[data-i18]')
+  .forEach((item) => item.textContent = i18Obj[lang][item.dataset.i18]);
 
+const setLocalStorage = (name, value) => localStorage.setItem(`${name}`, value);
 
-
-
-function setLocalStorage(name, value) {
-  localStorage.setItem(`${name}`, value)
-}
-
-function getLocalStorageLang() {
+const getLocalStorageLang = () => {
   if (localStorage.getItem('lang')) {
     const lang = localStorage.getItem('lang');
     document.querySelector(`[name=${lang}]`).classList.add('active');
     getTranslate(lang);
   } else {
-    document.querySelector(`[name='en']`).classList.add('active');
+    document.querySelector('[name=\'en\']').classList.add('active');
   }
-}
+};
 
-
-function getLocalStorageTheme() {
-  const theme = localStorage.getItem('lightTheme');
-  if (theme === "enabled") {
-    toggleTheme();
-  }
-}
-
-window.addEventListener('load', getLocalStorageLang);
-
+const getSelectors = (arr, selector) => {
+  arr.map((item) => Array
+    .from(document.querySelectorAll(item)))
+    .reduce((acc, cur) => acc.concat(cur))
+    .forEach((item) => item.classList.toggle(selector));
+};
 
 const toggleTheme = () => {
   themeButton.classList.toggle('active');
@@ -54,30 +45,31 @@ const toggleTheme = () => {
   getSelectors(lightThemeMenuSelectors, 'light-theme__burger-menu');
   getSelectors(lightThemePortfolioSelectors, 'light-theme__portfolio-button');
   if (themeButton.classList.contains('active')) {
-    setLocalStorage("lightTheme", "enabled");
-  } else { setLocalStorage("lightTheme", "disabled") };
-}
+    setLocalStorage('lightTheme', 'enabled');
+  } else { setLocalStorage('lightTheme', 'disabled'); }
+};
 
-
-window.addEventListener('load', getLocalStorageTheme);
+const getLocalStorageTheme = () => {
+  const theme = localStorage.getItem('lightTheme');
+  if (theme === 'enabled') {
+    toggleTheme();
+  }
+};
 
 const changeImage = (e) => {
   if (e.target.classList.contains('portfolio__filter-button')) {
-    portfolioButtons.forEach(item => item.classList.remove('active'));
+    portfolioButtons.forEach((item) => item.classList.remove('active'));
     e.target.classList.add('active');
-    portfolioImages.forEach((img, index) =>
-      img.src = `./assets/img/${e.target.dataset.i18}/${index + 1}.jpg`);
+    portfolioImages.forEach((img, index) => img.src = `./assets/img/${e.target.dataset.i18}/${index + 1}.jpg`);
   }
-}
-
-portfolioFilter.addEventListener('click', changeImage);
+};
 
 const toggleMenuButton = () => {
   menu.classList.toggle('header__menu_opened');
   menu.classList.contains('light-theme__burger-menu')
     ? menuButton.classList.toggle('light-theme__burger-menu-button')
     : menuButton.classList.toggle('header__menu-button_opened');
-}
+};
 
 const closeMenu = (e) => {
   if (e.target.classList.contains('header__menu-link')) {
@@ -85,34 +77,21 @@ const closeMenu = (e) => {
     menuButton.classList.remove('header__menu-button_opened');
     menu.classList.remove('header__menu_opened');
   }
-}
-
-const getSelectors = (arr, selector) => {
-  arr.map((item) => Array
-    .from(document.querySelectorAll(item)))
-    .reduce((acc, cur) => acc.concat(cur))
-    .forEach(item => item.classList.toggle(selector));
-}
-
-
+};
 
 const switchLanguage = (e) => {
   if (e.target.classList.contains('header__switcher-button')) {
-    langButtons.forEach(item => item.classList.remove('active'));
-    setLocalStorage("lang", e.target.name);
+    langButtons.forEach((item) => item.classList.remove('active'));
+    setLocalStorage('lang', e.target.name);
     e.target.classList.add('active');
   }
   return getTranslate(e.target.name);
-}
+};
 
-const getTranslate = (lang = 'en') => {
-  document.querySelectorAll('[data-i18]')
-    .forEach(item => item.textContent = i18Obj[lang][item.dataset.i18]);
-}
-
+window.addEventListener('load', getLocalStorageLang);
+window.addEventListener('load', getLocalStorageTheme);
+portfolioFilter.addEventListener('click', changeImage);
 menuButton.addEventListener('click', toggleMenuButton);
 menu.addEventListener('click', closeMenu);
 themeButton.addEventListener('click', toggleTheme);
 langSwitcher.addEventListener('click', switchLanguage);
-
-
